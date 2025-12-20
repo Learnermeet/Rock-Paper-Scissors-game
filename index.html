@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="score-board">
+        <span>You: <b id="userScore">0</b></span>
+        <span>Computer: <b id="computerScore">0</b></span>
+    </div>
+
+    <div class="vs-container">
+        <div class="player">
+            <h3>You</h3>
+            <div id="userDisplay" class="display">❔</div>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="player">
+            <h3>Computer</h3>
+            <div id="computerDisplay" class="display">❔</div>
+        </div>
+    </div>
+
+    <div class="choices">
+        <button class="choice" onclick="play('rock')">🪨</button>
+        <button class="choice" onclick="play('paper')">📄</button>
+        <button class="choice" onclick="play('scissors')">✂️</button>
+    </div>
+
+    <p id="message">Make your move!</p>
+
+    <button class="reset" onclick="resetGame()">Reset</button>
+</div>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2 id="popupMessage"></h2>
+        <button onclick="closePopup()">Play Again</button>
+    </div>
+</div>
+
+<canvas id="confetti"></canvas>
+<div id="thumbsDown">👎</div>
+
+<script src="script.js"></script>
+</body>
+</html>
